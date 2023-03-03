@@ -1,35 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/667417c7ec.js" crossorigin="anonymous"></script>
-    <script src="Aya/script.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <img src="./img/logo.jpg" class="logo">
-    <title>Ayameleng Security Services</title>
-</head>
+    <head>
+        <title>My Webpage</title>
+        <script src="info.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css">
 
-<body >
-    <div class = "background">
-        <img src = "./img/security.jpg">
-    </div>
-    <div class="background"></div>
-    <div class="container">
-        <div class="top">
-            <hr>
-            <p>AYAMELENG SECURITY SERVICES</p>
-            <hr>
-        </div>
-        <h1>UNDER CONSTRUCTION</h1>
-        <h3>PROGRESS</h3>
-        <div class="progress-wrapper">
-            <div class="progress"><span>3%</span></div>
-        </div>
-    </div>
-   
+     
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="./pictures/mocklogo.png" alt="Logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About me</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Contact me</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container">
+            <h1 class="mt-5">Welcome to My Webpage</h1>
+            <div class="video-container"><a name="home"></a>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/PlxWf493en4"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <div class="row my-5">
+                <div class="col-md-6">
+                    <div class="profile-text">
+                        <h2><a name="about"></a>About Me</h2>
+                        <div>
+                            <h5 id="name"></h5>
+                            <p id="bio"></p>
+                        </div>
+                        <div>
+                            <h5>Education</h5>
+                            <p id="education"></p>
+                        </div>
+                        <div>
+                            <h5>Contact Information</h5>
+                            <p id="contact"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="./pictures/picture.jpg" alt="Profile Picture"
+                        class="img-fluid rounded-circle profile-img">
+                </div>
+            </div>
+
+            <script>
+                document.getElementById("name").innerHTML = firstName + " " + lastName;
+                document.getElementById("bio").innerHTML = bio;
+                document.getElementById("education").innerHTML = degree + " from " + university + ", completed in " + year;
+                document.getElementById("contact").innerHTML = "Contact me at " + email + " or " + phone + ", or send me mail using the following address, " + address;
+            </script>
+
+            
+               
+                    <h3><a name="contact"></a> CONTACT ME</a> </h3>
+                    <div class="row my-5">
+                        <div class="col-md-6">
+                            <form action="https://formspree.io/f/mpzerzjb" method="POST">
+                                <div class="form-group">
+                                    <label>
+                                        Your Name:
+                                        <input type="name" class="form-text" name="name">
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label>
+                                        Your Surname:
+                                        <input type="surname" class="form-text" name="surname">
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label>
+                                        Your Email:
+                                        <input type="email" class="form-text" name="email">
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <label>
+                                        Your Message:
+                                        <textarea name="message" class="form-text"></textarea>
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                        <div class="col-md-6">
+                            <iframe width="560" height="315"
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1403.7419185809906!2d-73.985069!3d40.758896!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6018c05b70d7aab8!2sEmpire+State+Building!5e0!3m2!1sen!2sus!4v1552989188594">
+                            </iframe>
+                        </div>
+                        </div>
+                    
+                        <footer>
+                            <div class="social-media">
+                                <ul class="list-inline text-cente social-media">
+                                    <li><a href="https://www.facebook.com/joxicraft"><i class="fa fa-facebook-official"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/in/dineo-moroka-167293249"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="https://www.instagram.com/joxicraft/"><i class="fa fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                        </footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>
+
+                            
+
+                           
